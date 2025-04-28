@@ -8,6 +8,7 @@ int main()
     char nomecidade1[50];
     int populacao1, pontostur1;
     float pib1, area_km1;
+    float densidade1, pib_percapita1; 
 
 
      // carta 02
@@ -16,6 +17,10 @@ int main()
      char nomecidade2[50];
      int populacao2, pontostur2;
      float pib2, area_km2;
+     float densidade2, pib_percapita2; 
+
+
+
 
      
      // Corresponde a Carta 01
@@ -41,6 +46,9 @@ int main()
 
     printf("Digite o numero de pontos turisticos da cidade: \n");
     scanf(" %i", &pontostur1);
+
+    pib_percapita1 = pib1 / populacao1; 
+    densidade1 = populacao1 / area_km1;
 
     printf("OK! Você já inseriu os dados da carta 01.");
     
@@ -69,7 +77,14 @@ int main()
     printf("Digite o numero de pontos turisticos da cidade: \n");
     scanf(" %i", &pontostur2);
 
+
+    
+    pib_percapita2 = pib2 / populacao2; 
+    densidade2 = populacao2 / area_km2;
+
+
     printf("OK! Todas as informações ja foram preenchidas. As cartas correspondentes sao: \n");
+
 
     // Carta 01
 
@@ -81,7 +96,8 @@ int main()
     printf("Area em km2: %f \n", area_km1);
     printf("Pib da cidade: %f \n", pib1);
     printf("Quantidade de pontos turisticos: %i \n", pontostur1);
-
+    printf("Essa é a Densidade Populacional da cidade: %f hab/km² \n", densidade1);
+    printf("Esso é o PIB per capita: %f reais \n", pib_percapita1);
     // Carta 02
 
     
@@ -93,4 +109,6 @@ int main()
     printf("Area em km2: %f \n", area_km2);
     printf("Pib da cidade: %f \n", pib2);
     printf("Quantidade de pontos turisticos: %i \n", pontostur2);
+    printf("Essa é a Densidade Populacional da cidade: %f hab/km² \n", densidade2);
+    printf("Esso é o PIB per capita: %f reais \n", pib_percapita2 );
 }
